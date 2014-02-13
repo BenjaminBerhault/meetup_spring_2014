@@ -1,7 +1,13 @@
 
 # #Introduction to Python
+# 
+# <p>
+# Monte Lunacek<br>
+# Research Computing<br>
+# CU Boulder
+# </p>
 
-# <img src="files/img/monty-python.png">
+# <img src="files/img/monty-python.png" style="height:300px;">
 # 
 # <blockquote>
 # <p>
