@@ -5,7 +5,7 @@ merge_notebooks.py ../../master/notebooks/lecture_01_introduction.ipynb \
 ../../master/notebooks/lecture_04_control.ipynb \
 ../../master/notebooks/lecture_05_procedual.ipynb
  
-cp -r ../../master/notebooks/img img
+cp  ../../master/notebooks/img/* img
 mv test.ipynb introduction.ipynb
 
 create_stack.py introduction.ipynb
