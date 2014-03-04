@@ -1817,7 +1817,7 @@ init_mathjax();
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[360]:
+In&nbsp;[1]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
@@ -1832,7 +1832,7 @@ In&nbsp;[360]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[361]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">dates</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;2014-02-16&#39;</span><span class="p">,</span> <span class="s">&#39;2014-02-17&#39;</span><span class="p">,</span> <span class="s">&#39;2014-02-18&#39;</span><span class="p">,</span> <span class="s">&#39;2014-02-19&#39;</span><span class="p">]</span>
@@ -1856,7 +1856,7 @@ In&nbsp;[361]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[362]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
@@ -1874,17 +1874,17 @@ In&nbsp;[362]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 date,type,value
-2014-02-16,Model-A,8
-2014-02-16,Model-B,7
-2014-02-16,Model-C,2
-2014-02-17,Model-A,4
-2014-02-17,Model-B,4
-2014-02-17,Model-C,9
-2014-02-18,Model-A,7
-2014-02-18,Model-B,4
-2014-02-18,Model-C,6
-2014-02-19,Model-A,1
-2014-02-19,Model-B,8
+2014-02-16,Model-A,1
+2014-02-16,Model-B,3
+2014-02-16,Model-C,4
+2014-02-17,Model-A,8
+2014-02-17,Model-B,5
+2014-02-17,Model-C,8
+2014-02-18,Model-A,8
+2014-02-18,Model-B,8
+2014-02-18,Model-C,0
+2014-02-19,Model-A,5
+2014-02-19,Model-B,1
 2014-02-19,Model-C,6
 
 
@@ -1902,11 +1902,11 @@ date,type,value
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[363]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">df</span>
+<span class="n">df</span>
 </pre></div>
 
 </div>
@@ -1916,26 +1916,100 @@ In&nbsp;[363]:
 <div class="output vbox">
 
 
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-          date     type  value
-0   2014-02-16  Model-A      8
-1   2014-02-16  Model-B      7
-2   2014-02-16  Model-C      2
-3   2014-02-17  Model-A      4
-4   2014-02-17  Model-B      4
-5   2014-02-17  Model-C      9
-6   2014-02-18  Model-A      7
-7   2014-02-18  Model-B      4
-8   2014-02-18  Model-C      6
-9   2014-02-19  Model-A      1
-10  2014-02-19  Model-B      8
-11  2014-02-19  Model-C      6
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[5]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
-[12 rows x 3 columns]
+<div class="output_html rendered_html">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>type</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td> 2014-02-16</td>
+      <td> Model-A</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td> 2014-02-16</td>
+      <td> Model-B</td>
+      <td> 3</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td> 2014-02-16</td>
+      <td> Model-C</td>
+      <td> 4</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td> 2014-02-17</td>
+      <td> Model-A</td>
+      <td> 8</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td> 2014-02-17</td>
+      <td> Model-B</td>
+      <td> 5</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td> 2014-02-17</td>
+      <td> Model-C</td>
+      <td> 8</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td> 2014-02-18</td>
+      <td> Model-A</td>
+      <td> 8</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td> 2014-02-18</td>
+      <td> Model-B</td>
+      <td> 8</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td> 2014-02-18</td>
+      <td> Model-C</td>
+      <td> 0</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td> 2014-02-19</td>
+      <td> Model-A</td>
+      <td> 5</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td> 2014-02-19</td>
+      <td> Model-B</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td> 2014-02-19</td>
+      <td> Model-C</td>
+      <td> 6</td>
+    </tr>
+  </tbody>
+</table>
+<p>12 rows × 3 columns</p>
+</div>
+</div>
 
-</pre>
 </div>
 </div>
 
@@ -1960,7 +2034,7 @@ In&nbsp;[363]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[364]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">,</span> <span class="s">&#39;type&#39;</span><span class="p">,</span> <span class="s">&#39;value&#39;</span><span class="p">)</span> <span class="c">#row, column, values (optional)</span>
@@ -1979,10 +2053,10 @@ In&nbsp;[364]:
 <pre>
 type        Model-A  Model-B  Model-C
 date                                 
-2014-02-16        8        7        2
-2014-02-17        4        4        9
-2014-02-18        7        4        6
-2014-02-19        1        8        6
+2014-02-16        1        3        4
+2014-02-17        8        5        8
+2014-02-18        8        8        0
+2014-02-19        5        1        6
 
 [4 rows x 3 columns]
 
@@ -1997,7 +2071,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[365]:
+In&nbsp;[7]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">columns</span>
@@ -2011,7 +2085,7 @@ In&nbsp;[365]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[365]:</div>
+    Out[7]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2029,7 +2103,7 @@ Index([u&apos;Model-A&apos;, u&apos;Model-B&apos;, u&apos;Model-C&apos;], dtype=
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[366]:
+In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">index</span>
@@ -2043,7 +2117,7 @@ In&nbsp;[366]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[366]:</div>
+    Out[8]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2064,7 +2138,7 @@ Index([u&apos;2014-02-16&apos;, u&apos;2014-02-17&apos;, u&apos;2014-02-18&apos;
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[367]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="p">[</span><span class="s">&#39;Model-A&#39;</span><span class="p">]</span>
@@ -2078,16 +2152,16 @@ In&nbsp;[367]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[367]:</div>
+    Out[9]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
 date
-2014-02-16    8
-2014-02-17    4
-2014-02-18    7
-2014-02-19    1
+2014-02-16    1
+2014-02-17    8
+2014-02-18    8
+2014-02-19    5
 Name: Model-A, dtype: int64
 </pre>
 
@@ -2101,7 +2175,7 @@ Name: Model-A, dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[368]:
+In&nbsp;[10]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="p">[</span><span class="s">&#39;Model-A&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -2115,12 +2189,12 @@ In&nbsp;[368]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[368]:</div>
+    Out[10]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-array([8, 4, 7, 1])
+array([1, 8, 8, 5])
 </pre>
 
 </div>
@@ -2136,7 +2210,7 @@ array([8, 4, 7, 1])
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[369]:
+In&nbsp;[11]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -2150,15 +2224,15 @@ In&nbsp;[369]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[369]:</div>
+    Out[11]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
 type
-Model-A    8
-Model-B    7
-Model-C    2
+Model-A    1
+Model-B    3
+Model-C    4
 Name: 2014-02-16, dtype: int64
 </pre>
 
@@ -2172,7 +2246,7 @@ Name: 2014-02-16, dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[370]:
+In&nbsp;[12]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s">&#39;2014-02-16&#39;</span><span class="p">]</span>
@@ -2186,15 +2260,15 @@ In&nbsp;[370]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[370]:</div>
+    Out[12]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
 type
-Model-A    8
-Model-B    7
-Model-C    2
+Model-A    1
+Model-B    3
+Model-C    4
 Name: 2014-02-16, dtype: int64
 </pre>
 
@@ -2211,7 +2285,7 @@ Name: 2014-02-16, dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[372]:
+In&nbsp;[13]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:]</span>
@@ -2229,8 +2303,8 @@ In&nbsp;[372]:
 <pre>
 type        Model-B  Model-C
 date                        
-2014-02-18        4        6
-2014-02-19        8        6
+2014-02-18        8        0
+2014-02-19        1        6
 
 [2 rows x 2 columns]
 
@@ -2249,7 +2323,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[373]:
+In&nbsp;[14]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2263,16 +2337,16 @@ In&nbsp;[373]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[373]:</div>
+    Out[14]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
 date
-2014-02-16    5.666667
-2014-02-17    5.666667
-2014-02-18    5.666667
-2014-02-19    5.000000
+2014-02-16    2.666667
+2014-02-17    7.000000
+2014-02-18    5.333333
+2014-02-19    4.000000
 dtype: float64
 </pre>
 
@@ -2289,7 +2363,7 @@ dtype: float64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[374]:
+In&nbsp;[15]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -2303,7 +2377,7 @@ In&nbsp;[374]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[374]:</div>
+    Out[15]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2328,7 +2402,7 @@ dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[375]:
+In&nbsp;[16]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
@@ -2347,7 +2421,7 @@ In&nbsp;[375]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[375]:</div>
+    Out[16]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -2390,7 +2464,7 @@ In&nbsp;[375]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[376]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tmp</span><span class="p">)],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -2405,7 +2479,7 @@ In&nbsp;[376]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[376]:</div>
+    Out[17]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2426,7 +2500,7 @@ In&nbsp;[376]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[377]:
+In&nbsp;[18]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2440,7 +2514,7 @@ In&nbsp;[377]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[377]:</div>
+    Out[18]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -2459,31 +2533,31 @@ In&nbsp;[377]:
       <th>0</th>
       <td> 2014-02-16</td>
       <td> Model-A</td>
-      <td> 8</td>
+      <td> 1</td>
     </tr>
     <tr>
       <th>1</th>
       <td> 2014-02-16</td>
       <td> Model-B</td>
-      <td> 7</td>
+      <td> 3</td>
     </tr>
     <tr>
       <th>3</th>
       <td> 2014-02-17</td>
       <td> Model-A</td>
-      <td> 4</td>
+      <td> 8</td>
     </tr>
     <tr>
       <th>4</th>
       <td> 2014-02-17</td>
       <td> Model-B</td>
-      <td> 4</td>
+      <td> 5</td>
     </tr>
     <tr>
       <th>5</th>
       <td> 2014-02-17</td>
       <td> Model-C</td>
-      <td> 9</td>
+      <td> 8</td>
     </tr>
   </tbody>
 </table>
@@ -2501,7 +2575,7 @@ In&nbsp;[377]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[378]:
+In&nbsp;[19]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -2514,7 +2588,7 @@ In&nbsp;[378]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[379]:
+In&nbsp;[20]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s">&#39;type&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2528,7 +2602,7 @@ In&nbsp;[379]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[379]:</div>
+    Out[20]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -2545,27 +2619,27 @@ In&nbsp;[379]:
     <tr>
       <th>0</th>
       <td> 2014-02-16</td>
-      <td> 8</td>
+      <td> 1</td>
     </tr>
     <tr>
       <th>1</th>
       <td> 2014-02-16</td>
-      <td> 7</td>
+      <td> 3</td>
     </tr>
     <tr>
       <th>3</th>
       <td> 2014-02-17</td>
-      <td> 4</td>
+      <td> 8</td>
     </tr>
     <tr>
       <th>4</th>
       <td> 2014-02-17</td>
-      <td> 4</td>
+      <td> 5</td>
     </tr>
     <tr>
       <th>5</th>
       <td> 2014-02-17</td>
-      <td> 9</td>
+      <td> 8</td>
     </tr>
   </tbody>
 </table>
@@ -2586,7 +2660,7 @@ In&nbsp;[379]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[380]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">,</span><span class="s">&#39;type&#39;</span><span class="p">,</span> <span class="s">&#39;value&#39;</span><span class="p">)</span>
@@ -2605,10 +2679,10 @@ In&nbsp;[380]:
 <pre>
 type        Model-A  Model-B  Model-C  Model-D
 date                                          
-2014-02-16        8        7      NaN       11
-2014-02-17        4        4        9      NaN
-2014-02-18        7        4        6        7
-2014-02-19        1        8        6      NaN
+2014-02-16        1        3      NaN       11
+2014-02-17        8        5        8      NaN
+2014-02-18        8        8        0        7
+2014-02-19        5        1        6      NaN
 
 [4 rows x 4 columns]
 
@@ -2623,7 +2697,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[381]:
+In&nbsp;[22]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2637,16 +2711,16 @@ In&nbsp;[381]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[381]:</div>
+    Out[22]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
 date
-2014-02-16    8.666667
-2014-02-17    5.666667
-2014-02-18    6.000000
-2014-02-19    5.000000
+2014-02-16    5.00
+2014-02-17    7.00
+2014-02-18    5.75
+2014-02-19    4.00
 dtype: float64
 </pre>
 
@@ -2660,7 +2734,7 @@ dtype: float64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[382]:
+In&nbsp;[23]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -2674,7 +2748,7 @@ In&nbsp;[382]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[382]:</div>
+    Out[23]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2697,7 +2771,7 @@ dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[383]:
+In&nbsp;[24]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2711,7 +2785,7 @@ In&nbsp;[383]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[383]:</div>
+    Out[24]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2737,7 +2811,7 @@ dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[384]:
+In&nbsp;[27]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
@@ -2773,7 +2847,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[385]:
+In&nbsp;[28]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -2791,10 +2865,10 @@ In&nbsp;[385]:
 <pre>
 type        Model-A  Model-B  Model-C  Model-D
 date                                          
-2014-02-16        8        7        0       11
-2014-02-17        4        4        9        0
-2014-02-18        7        4        6        7
-2014-02-19        1        8        6        0
+2014-02-16        1        3        0       11
+2014-02-17        8        5        8        0
+2014-02-18        8        8        0        7
+2014-02-19        5        1        6        0
 
 [4 rows x 4 columns]
 
@@ -2809,7 +2883,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[386]:
+In&nbsp;[29]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span>
@@ -2827,10 +2901,10 @@ In&nbsp;[386]:
 <pre>
 type        Model-A  Model-B  Model-C  Model-D
 date                                          
-2014-02-16        8        7      NaN       11
-2014-02-17        4        4        9      NaN
-2014-02-18        7        4        6        7
-2014-02-19        1        8        6      NaN
+2014-02-16        1        3      NaN       11
+2014-02-17        8        5        8      NaN
+2014-02-18        8        8        0        7
+2014-02-19        5        1        6      NaN
 
 [4 rows x 4 columns]
 
@@ -2845,7 +2919,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[387]:
+In&nbsp;[30]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -2858,7 +2932,7 @@ In&nbsp;[387]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[388]:
+In&nbsp;[31]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -2877,10 +2951,10 @@ In&nbsp;[388]:
 <pre>
 type        Model-A  Model-B  Model-C  Model-D
 date                                          
-2014-02-16        8        7        0       11
-2014-02-17        4        4        9        0
-2014-02-18        7        4        6        7
-2014-02-19        1        8        6        0
+2014-02-16        1        3        0       11
+2014-02-17        8        5        8        0
+2014-02-18        8        8        0        7
+2014-02-19        5        1        6        0
 
 [4 rows x 4 columns]
 
@@ -2898,7 +2972,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[389]:
+In&nbsp;[32]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -2913,7 +2987,7 @@ In&nbsp;[389]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[389]:</div>
+    Out[32]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2931,7 +3005,7 @@ Index([u&apos;date&apos;, u&apos;Model-A&apos;, u&apos;Model-B&apos;, u&apos;Mod
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[390]:
+In&nbsp;[33]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">tmp</span>
@@ -2948,10 +3022,10 @@ In&nbsp;[390]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 type        date  Model-A  Model-B  Model-C  Model-D
-0     2014-02-16        8        7        0       11
-1     2014-02-17        4        4        9        0
-2     2014-02-18        7        4        6        7
-3     2014-02-19        1        8        6        0
+0     2014-02-16        1        3        0       11
+1     2014-02-17        8        5        8        0
+2     2014-02-18        8        8        0        7
+3     2014-02-19        5        1        6        0
 
 [4 rows x 5 columns]
 
@@ -2969,7 +3043,7 @@ type        date  Model-A  Model-B  Model-C  Model-D
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[391]:
+In&nbsp;[34]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">tmp</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">)</span>
@@ -2987,10 +3061,10 @@ In&nbsp;[391]:
 <pre>
             Model-A  Model-B  Model-C  Model-D
 date                                          
-2014-02-16        8        7        0       11
-2014-02-17        4        4        9        0
-2014-02-18        7        4        6        7
-2014-02-19        1        8        6        0
+2014-02-16        1        3        0       11
+2014-02-17        8        5        8        0
+2014-02-18        8        8        0        7
+2014-02-19        5        1        6        0
 
 [4 rows x 4 columns]
 
@@ -3005,7 +3079,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[392]:
+In&nbsp;[35]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">X</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()</span>
@@ -3020,15 +3094,15 @@ In&nbsp;[392]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[392]:</div>
+    Out[35]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-array([[  8.,   7.,   0.,  11.],
-       [  4.,   4.,   9.,   0.],
-       [  7.,   4.,   6.,   7.],
-       [  1.,   8.,   6.,   0.]])
+array([[  1.,   3.,   0.,  11.],
+       [  8.,   5.,   8.,   0.],
+       [  8.,   8.,   0.,   7.],
+       [  5.,   1.,   6.,   0.]])
 </pre>
 
 </div>
@@ -3044,7 +3118,7 @@ array([[  8.,   7.,   0.,  11.],
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[393]:
+In&nbsp;[36]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">,</span><span class="s">&#39;type&#39;</span><span class="p">,</span> <span class="s">&#39;value&#39;</span><span class="p">)</span>
@@ -3063,10 +3137,10 @@ In&nbsp;[393]:
 <pre>
 type        Model-A  Model-B  Model-C  Model-D
 date                                          
-2014-02-16        8        7      NaN       11
-2014-02-17        4        4        9      NaN
-2014-02-18        7        4        6        7
-2014-02-19        1        8        6      NaN
+2014-02-16        1        3      NaN       11
+2014-02-17        8        5        8      NaN
+2014-02-18        8        8        0        7
+2014-02-19        5        1        6      NaN
 
 [4 rows x 4 columns]
 
@@ -3081,7 +3155,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[394]:
+In&nbsp;[37]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -3099,10 +3173,10 @@ In&nbsp;[394]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 type        date  Model-A  Model-B  Model-C  Model-D
-0     2014-02-16        8        7      NaN       11
-1     2014-02-17        4        4        9      NaN
-2     2014-02-18        7        4        6        7
-3     2014-02-19        1        8        6      NaN
+0     2014-02-16        1        3      NaN       11
+1     2014-02-17        8        5        8      NaN
+2     2014-02-18        8        8        0        7
+3     2014-02-19        5        1        6      NaN
 
 [4 rows x 5 columns]
 
@@ -3117,7 +3191,7 @@ type        date  Model-A  Model-B  Model-C  Model-D
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[395]:
+In&nbsp;[38]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">back</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;date&#39;</span><span class="p">])</span>
@@ -3135,17 +3209,17 @@ In&nbsp;[395]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
           date     type  value
-0   2014-02-16  Model-A      8
-1   2014-02-17  Model-A      4
-2   2014-02-18  Model-A      7
-3   2014-02-19  Model-A      1
-4   2014-02-16  Model-B      7
-5   2014-02-17  Model-B      4
-6   2014-02-18  Model-B      4
-7   2014-02-19  Model-B      8
+0   2014-02-16  Model-A      1
+1   2014-02-17  Model-A      8
+2   2014-02-18  Model-A      8
+3   2014-02-19  Model-A      5
+4   2014-02-16  Model-B      3
+5   2014-02-17  Model-B      5
+6   2014-02-18  Model-B      8
+7   2014-02-19  Model-B      1
 8   2014-02-16  Model-C    NaN
-9   2014-02-17  Model-C      9
-10  2014-02-18  Model-C      6
+9   2014-02-17  Model-C      8
+10  2014-02-18  Model-C      0
 11  2014-02-19  Model-C      6
 12  2014-02-16  Model-D     11
 13  2014-02-17  Model-D    NaN
@@ -3168,10 +3242,10 @@ In&nbsp;[395]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[396]:
+In&nbsp;[40]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">back</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">back</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -3182,7 +3256,7 @@ In&nbsp;[396]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[396]:</div>
+    Out[40]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -3198,38 +3272,86 @@ In&nbsp;[396]:
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>0 </th>
       <td> 2014-02-16</td>
       <td> Model-A</td>
-      <td> 8</td>
+      <td>  1</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>1 </th>
       <td> 2014-02-17</td>
       <td> Model-A</td>
-      <td> 4</td>
+      <td>  8</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>2 </th>
       <td> 2014-02-18</td>
       <td> Model-A</td>
-      <td> 7</td>
+      <td>  8</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>3 </th>
       <td> 2014-02-19</td>
       <td> Model-A</td>
-      <td> 1</td>
+      <td>  5</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>4 </th>
       <td> 2014-02-16</td>
       <td> Model-B</td>
-      <td> 7</td>
+      <td>  3</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td> 2014-02-17</td>
+      <td> Model-B</td>
+      <td>  5</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td> 2014-02-18</td>
+      <td> Model-B</td>
+      <td>  8</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td> 2014-02-19</td>
+      <td> Model-B</td>
+      <td>  1</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td> 2014-02-17</td>
+      <td> Model-C</td>
+      <td>  8</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td> 2014-02-18</td>
+      <td> Model-C</td>
+      <td>  0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td> 2014-02-19</td>
+      <td> Model-C</td>
+      <td>  6</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td> 2014-02-16</td>
+      <td> Model-D</td>
+      <td> 11</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td> 2014-02-18</td>
+      <td> Model-D</td>
+      <td>  7</td>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 3 columns</p>
+<p>13 rows × 3 columns</p>
 </div>
 </div>
 
@@ -3243,7 +3365,7 @@ In&nbsp;[396]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[397]:
+In&nbsp;[41]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">back</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3257,7 +3379,7 @@ In&nbsp;[397]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[397]:</div>
+    Out[41]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -3315,7 +3437,7 @@ In&nbsp;[397]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[398]:
+In&nbsp;[42]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">back</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -3328,7 +3450,7 @@ In&nbsp;[398]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[399]:
+In&nbsp;[43]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">back</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">&#39;back.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
@@ -3341,7 +3463,7 @@ In&nbsp;[399]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[400]:
+In&nbsp;[44]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;back.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -3358,16 +3480,16 @@ In&nbsp;[400]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 date,type,value
-2014-02-16,Model-A,8.0
-2014-02-17,Model-A,4.0
-2014-02-18,Model-A,7.0
-2014-02-19,Model-A,1.0
-2014-02-16,Model-B,7.0
-2014-02-17,Model-B,4.0
-2014-02-18,Model-B,4.0
-2014-02-19,Model-B,8.0
-2014-02-17,Model-C,9.0
-2014-02-18,Model-C,6.0
+2014-02-16,Model-A,1.0
+2014-02-17,Model-A,8.0
+2014-02-18,Model-A,8.0
+2014-02-19,Model-A,5.0
+2014-02-16,Model-B,3.0
+2014-02-17,Model-B,5.0
+2014-02-18,Model-B,8.0
+2014-02-19,Model-B,1.0
+2014-02-17,Model-C,8.0
+2014-02-18,Model-C,0.0
 2014-02-19,Model-C,6.0
 2014-02-16,Model-D,11.0
 2014-02-18,Model-D,7.0
@@ -3398,7 +3520,7 @@ date,type,value
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[250]:
+In&nbsp;[1]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
@@ -3415,7 +3537,7 @@ In&nbsp;[250]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[241]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">get_movie_data</span><span class="p">():</span>
@@ -3442,7 +3564,7 @@ In&nbsp;[241]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[242]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">users</span><span class="p">,</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">movies</span> <span class="o">=</span> <span class="n">get_movie_data</span><span class="p">()</span>
@@ -3455,7 +3577,7 @@ In&nbsp;[242]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[243]:
+In&nbsp;[4]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">users</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3491,7 +3613,7 @@ In&nbsp;[243]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[244]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">ratings</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3527,7 +3649,7 @@ In&nbsp;[244]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[245]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">movies</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3571,7 +3693,7 @@ In&nbsp;[245]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[246]:
+In&nbsp;[7]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span> <span class="o">=</span> <span class="n">movies</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&#39;(.*) \(([0-9]+)\)&#39;</span><span class="p">)</span>
@@ -3589,7 +3711,7 @@ In&nbsp;[246]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[247]:
+In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ratings</span><span class="p">,</span> <span class="n">users</span><span class="p">),</span> <span class="n">movies</span><span class="p">)</span>
@@ -3602,7 +3724,7 @@ In&nbsp;[247]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[248]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
@@ -3646,11 +3768,12 @@ short_title
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[253]:
+In&nbsp;[14]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s">&#39;short_title&#39;</span><span class="p">,</span><span class="s">&#39;rating&#39;</span><span class="p">]]</span>
 <span class="k">print</span> <span class="n">tmp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -3671,6 +3794,7 @@ In&nbsp;[253]:
 4  One Flew Over the Cuckoo&apos;s Nest       5
 
 [5 rows x 2 columns]
+1000209
 
 </pre>
 </div>
@@ -3686,7 +3810,7 @@ In&nbsp;[253]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[254]:
+In&nbsp;[15]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">grp</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;short_title&#39;</span><span class="p">)</span>
@@ -3699,7 +3823,7 @@ In&nbsp;[254]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[255]:
+In&nbsp;[16]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">grp</span><span class="p">)</span>
@@ -3731,7 +3855,7 @@ In&nbsp;[255]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[257]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_rating</span> <span class="o">=</span> <span class="n">grp</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -3771,7 +3895,7 @@ max       5.000000
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[258]:
+In&nbsp;[18]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">mean_rating</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3814,7 +3938,7 @@ $1,000,000 Duck         3.027027
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[261]:
+In&nbsp;[19]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">mean_rating</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -3859,7 +3983,7 @@ One Little Indian                        5
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[262]:
+In&nbsp;[20]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_rating</span> <span class="o">=</span> <span class="n">grp</span><span class="p">[</span><span class="s">&#39;rating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s">&#39;mean&#39;</span><span class="p">,</span><span class="s">&#39;count&#39;</span><span class="p">])</span>
@@ -3905,7 +4029,7 @@ One Little Indian                      5      1
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[263]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mask</span> <span class="o">=</span> <span class="n">mean_rating</span><span class="p">[</span><span class="s">&#39;count&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1000</span>
@@ -3946,7 +4070,7 @@ Name: count, dtype: bool
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[264]:
+In&nbsp;[22]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">mean_rating</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3983,7 +4107,7 @@ Airplane!              3.971115   1731
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[265]:
+In&nbsp;[23]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_rating</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">mask</span><span class="p">][</span><span class="s">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
@@ -3997,7 +4121,7 @@ In&nbsp;[265]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[265]:</div>
+    Out[23]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -4018,7 +4142,7 @@ In&nbsp;[265]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[266]:
+In&nbsp;[24]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">mean_rating</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;mean&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -4063,7 +4187,7 @@ Sixth Sense, The                          4.406263   2459
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[267]:
+In&nbsp;[25]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -4077,7 +4201,7 @@ In&nbsp;[267]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[267]:</div>
+    Out[25]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -4151,7 +4275,7 @@ In&nbsp;[267]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[268]:
+In&nbsp;[26]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s">&#39;rating&#39;</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="s">&#39;short_title&#39;</span><span class="p">,</span> 
@@ -4198,10 +4322,23 @@ $1,000,000 Duck             3.375000  2.761905
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[269]:
+In&nbsp;[27]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">mean_ratings</span> <span class="o">=</span> <span class="n">mean_ratings</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="err">?</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">mean_ratings</span> <span class="o">=</span> <span class="n">mean_ratings</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -4214,7 +4351,7 @@ In&nbsp;[269]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[270]:
+In&nbsp;[30]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">mean_ratings</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;M&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -4259,7 +4396,7 @@ Godfather: Part II, The                   4.040936  4.437778
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[271]:
+In&nbsp;[31]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">mean_ratings</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;F&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -4304,7 +4441,7 @@ Amadeus                                   4.346734  4.213415
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[272]:
+In&nbsp;[32]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;diff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;M&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;F&#39;</span><span class="p">])</span>
@@ -4317,7 +4454,7 @@ In&nbsp;[272]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[274]:
+In&nbsp;[33]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_ratings</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;diff&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -4331,7 +4468,7 @@ In&nbsp;[274]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[274]:</div>
+    Out[33]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -4428,7 +4565,7 @@ In&nbsp;[274]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[275]:
+In&nbsp;[34]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_ratings</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;diff&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -4442,7 +4579,7 @@ In&nbsp;[275]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[275]:</div>
+    Out[34]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -4544,7 +4681,7 @@ In&nbsp;[275]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[279]:
+In&nbsp;[35]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;diff&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -4723,11 +4860,11 @@ YQkTAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[278]:
+In&nbsp;[38]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="c">#blue</span>
-<span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">mean_ratings</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="c">#blue</span>
+<span class="c">#mean_ratings[&#39;M&#39;].hist(alpha=0.5)</span>
 <span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -4742,189 +4879,277 @@ In&nbsp;[278]:
 <div class="box-flex1 output_subarea output_display_data">
 
 
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
+ePLJJ2N+fTqhrUvsdjTnwoXn+WjP7+zsiGn/drY7OzuMaBuiaevcrIcJbZ/TbZ0nZGPAvr29XZs2
+bRr5RklXV5cmTZokSfrlL3+pjz76SGvXrh319Q0NDaqoqIj0No5obGzksvUfNDY26orZFdpztMe1
+95hV7NUhl4YAnd53W1tb2GVrN7PHY/8Lp/k0o9gb02tjOU+am5tVWVkZ0/slC9o6c7R29EfVdl14
+fo8mmdqsWPdrtxax7NsuN+scTdsX63kyWnsXcU7T448/rg8++EAnTpzQmjVr9Nd//dd6//33deTI
+EXk8HpWUlOiee+6JOpBbUrkRiRZzmsIxzm/hPLkYbV1y4/y2UAtL3NdpeuCBBy56bNmyZY6GAIBE
+o60DEEnKrQiernMvLoVahDt/LDzdcWwkPz7DcJzfFmphifs6TQAAAEjBThPj/BZqEY5xfgvHRvLj
+MwzH+W2hFhYj1mkCAABINynXaWKc30ItwjHOb+HYSH58huE4vy3UwsKcJgAAgARIuU4T4/wWahGO
+cX4Lx0by4zMMx/ltoRaWuK/TtGPHDrW0tKigoGBkldze3l7V1dWpo6NDJSUlqqmpMeYmlgAQC9o6
+AJFEvNL0hS98QQ8//HDYY4FAQHPnztW2bdtUXl6uQCDgWsBoMc5voRbhGOe3cGxcjLYuuXF+W6iF
+xenzJOKVpjlz5qi9vT3ssaamJtXW1kqSli5dqtraWq1atcrRYOmis/+MuvoHXdn3QLZf/WeHXNk3
+kGpo64DkcHowaPsWYQPZ/qhuJzbJm6Uib/aoP4/YabqUnp4e+f1+SefuAt7T494NYaOVbOP8Xf2D
+7t1QN7NIE88E3dl3EmKc35Js50mi0NYlD85vS6rX4uTpIe379KS9J2cW6VgUv2MXTvON2Wka90Rw
+j8cz3l0AgPFo6wDEdKXJ5/Opu7tbfr9fXV1d8vl8EV/T2Ng48pfR8BijG9vnj1/G4/2c2B4efx7+
+68CpbUmaVTzbtf27vT2reLbj9SgtLXVt/27nv3B74bTrJMV2/O3fv19r1qyJ6vVer1fphrYuedrG
+C8/z0Z5f5CmW5I16/3a2Ozs71NbWkfC25MKaJKoeJrSt7e3tmj9/vu3nXzmUpxnF5RqNJxQKhUb9
+6R+0t7dr06ZNI98o2blzp/Lz81VVVaVAIKC+vr4xx/kbGhpUUVER6W0ccX6DlQxaO/pdG55ra2vT
+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
 ">
 
 </div>
@@ -4940,7 +5165,7 @@ IDQBAAB4QGgCAADwgNAEAADgAaEJAADAA0ITAACAB/8fiPHIudgH6TkAAAAASUVORK5CYII=
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[280]:
+In&nbsp;[39]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">diff_mask</span> <span class="o">=</span> <span class="n">mean_ratings</span><span class="p">[</span><span class="s">&#39;diff&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span> 
@@ -4955,7 +5180,7 @@ In&nbsp;[280]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[282]:
+In&nbsp;[40]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">mask</span> <span class="o">=</span> <span class="n">diff_mask</span> <span class="o">&amp;</span> <span class="n">m_mask</span> <span class="o">&amp;</span> <span class="n">f_mask</span>
@@ -4968,7 +5193,7 @@ In&nbsp;[282]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[283]:
+In&nbsp;[41]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span> <span class="o">=</span> <span class="n">mean_ratings</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
@@ -4981,7 +5206,7 @@ In&nbsp;[283]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[284]:
+In&nbsp;[42]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">tmp</span>
@@ -5017,7 +5242,7 @@ Usual Suspects, The        4.513317  4.518248  0.004931
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[285]:
+In&nbsp;[43]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span><span class="p">[</span><span class="s">&#39;mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;M&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;F&#39;</span><span class="p">]</span>
@@ -5030,7 +5255,7 @@ In&nbsp;[285]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[286]:
+In&nbsp;[44]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">tmp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&#39;mean&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -5085,7 +5310,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;data&#39;</span><span class="p">,</span><span class="s">&#39;example.csv&#39;</span><span class="p">)</span>
@@ -5104,17 +5329,17 @@ In&nbsp;[8]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
           date     type  value
-0   2014-02-16  Model-A      8
-1   2014-02-16  Model-B      7
-2   2014-02-16  Model-C      2
-3   2014-02-17  Model-A      4
-4   2014-02-17  Model-B      4
-5   2014-02-17  Model-C      9
-6   2014-02-18  Model-A      7
-7   2014-02-18  Model-B      4
-8   2014-02-18  Model-C      6
-9   2014-02-19  Model-A      1
-10  2014-02-19  Model-B      8
+0   2014-02-16  Model-A      1
+1   2014-02-16  Model-B      3
+2   2014-02-16  Model-C      4
+3   2014-02-17  Model-A      8
+4   2014-02-17  Model-B      5
+5   2014-02-17  Model-C      8
+6   2014-02-18  Model-A      8
+7   2014-02-18  Model-B      8
+8   2014-02-18  Model-C      0
+9   2014-02-19  Model-A      5
+10  2014-02-19  Model-B      1
 11  2014-02-19  Model-C      6
 
 [12 rows x 3 columns]
@@ -5133,7 +5358,7 @@ In&nbsp;[8]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -5147,7 +5372,7 @@ In&nbsp;[9]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[3]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -5165,7 +5390,7 @@ In&nbsp;[9]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[4]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
@@ -5180,7 +5405,7 @@ In&nbsp;[10]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[4]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -5198,7 +5423,7 @@ In&nbsp;[10]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5215,11 +5440,11 @@ In&nbsp;[11]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
          date     type  value     score
-0  2014-02-16  Model-A      8  0.020874
-1  2014-02-16  Model-B      7  0.926256
-2  2014-02-16  Model-C      2  0.494278
-3  2014-02-17  Model-A      4  0.891048
-4  2014-02-17  Model-B      4  0.760260
+0  2014-02-16  Model-A      1  0.202855
+1  2014-02-16  Model-B      3  0.287901
+2  2014-02-16  Model-C      4  0.539970
+3  2014-02-17  Model-A      8  0.142716
+4  2014-02-17  Model-B      5  0.252482
 
 [5 rows x 4 columns]
 
@@ -5237,7 +5462,7 @@ In&nbsp;[11]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s">&#39;date&#39;</span><span class="p">,</span> <span class="s">&#39;type&#39;</span><span class="p">)</span> <span class="c">#row, column, values (optional)</span>
@@ -5257,10 +5482,10 @@ In&nbsp;[12]:
               value                       score                    
 type        Model-A  Model-B  Model-C   Model-A   Model-B   Model-C
 date                                                               
-2014-02-16        8        7        2  0.020874  0.926256  0.494278
-2014-02-17        4        4        9  0.891048  0.760260  0.115907
-2014-02-18        7        4        6  0.638869  0.026314  0.749919
-2014-02-19        1        8        6  0.638298  0.026485  0.743300
+2014-02-16        1        3        4  0.202855  0.287901  0.539970
+2014-02-17        8        5        8  0.142716  0.252482  0.801581
+2014-02-18        8        8        0  0.510448  0.752879  0.038923
+2014-02-19        5        1        6  0.742021  0.561749  0.210681
 
 [4 rows x 6 columns]
 
@@ -5278,10 +5503,10 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">columns</span>
+<div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
 </div>
@@ -5291,18 +5516,17 @@ In&nbsp;[13]:
 <div class="output vbox">
 
 
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-       type   
-value  Model-A
-       Model-B
-       Model-C
-score  Model-A
-       Model-B
-       Model-C
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
+
+<pre>
+MultiIndex(levels=[[u&apos;value&apos;, u&apos;score&apos;], [u&apos;Model-A&apos;, u&apos;Model-B&apos;, u&apos;Model-C&apos;]],
+           labels=[[0, 0, 0, 1, 1, 1], [0, 1, 2, 0, 1, 2]],
+           names=[None, u&apos;type&apos;])
 </pre>
+
 </div>
 </div>
 
@@ -5313,7 +5537,7 @@ score  Model-A
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -5327,7 +5551,7 @@ In&nbsp;[14]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
+    Out[9]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -5350,7 +5574,7 @@ dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[10]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">results</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -5364,7 +5588,7 @@ In&nbsp;[15]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[10]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -5390,10 +5614,10 @@ dtype: int64
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[12]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="p">[</span><span class="s">&#39;score&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="p">[</span><span class="s">&#39;score&#39;</span><span class="p">][</span><span class="s">&#39;Model-A&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -5406,14 +5630,12 @@ In&nbsp;[16]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-type         Model-A   Model-B   Model-C
-date                                    
-2014-02-16  0.020874  0.926256  0.494278
-2014-02-17  0.891048  0.760260  0.115907
-2014-02-18  0.638869  0.026314  0.749919
-2014-02-19  0.638298  0.026485  0.743300
-
-[4 rows x 3 columns]
+date
+2014-02-16    0.202855
+2014-02-17    0.142716
+2014-02-18    0.510448
+2014-02-19    0.742021
+Name: Model-A, dtype: float64
 
 </pre>
 </div>
@@ -5429,7 +5651,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[13]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">tmp</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">swaplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -5449,10 +5671,10 @@ In&nbsp;[17]:
 type        Model-A  Model-B  Model-C   Model-A   Model-B   Model-C
               value    value    value     score     score     score
 date                                                               
-2014-02-16        8        7        2  0.020874  0.926256  0.494278
-2014-02-17        4        4        9  0.891048  0.760260  0.115907
-2014-02-18        7        4        6  0.638869  0.026314  0.749919
-2014-02-19        1        8        6  0.638298  0.026485  0.743300
+2014-02-16        1        3        4  0.202855  0.287901  0.539970
+2014-02-17        8        5        8  0.142716  0.252482  0.801581
+2014-02-18        8        8        0  0.510448  0.752879  0.038923
+2014-02-19        5        1        6  0.742021  0.561749  0.210681
 
 [4 rows x 6 columns]
 
@@ -5467,7 +5689,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[14]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;Model-A&#39;</span><span class="p">]</span>
@@ -5485,10 +5707,10 @@ In&nbsp;[18]:
 <pre>
             value     score
 date                       
-2014-02-16      8  0.020874
-2014-02-17      4  0.891048
-2014-02-18      7  0.638869
-2014-02-19      1  0.638298
+2014-02-16      1  0.202855
+2014-02-17      8  0.142716
+2014-02-18      8  0.510448
+2014-02-19      5  0.742021
 
 [4 rows x 2 columns]
 
@@ -5506,7 +5728,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[15]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span>
@@ -5525,10 +5747,10 @@ In&nbsp;[19]:
               value                       score                    
 type        Model-A  Model-B  Model-C   Model-A   Model-B   Model-C
 date                                                               
-2014-02-16        8        7        2  0.020874  0.926256  0.494278
-2014-02-17        4        4        9  0.891048  0.760260  0.115907
-2014-02-18        7        4        6  0.638869  0.026314  0.749919
-2014-02-19        1        8        6  0.638298  0.026485  0.743300
+2014-02-16        1        3        4  0.202855  0.287901  0.539970
+2014-02-17        8        5        8  0.142716  0.252482  0.801581
+2014-02-18        8        8        0  0.510448  0.752879  0.038923
+2014-02-19        5        1        6  0.742021  0.561749  0.210681
 
 [4 rows x 6 columns]
 
@@ -5543,7 +5765,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[20]:
+In&nbsp;[16]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span> <span class="c">#Defaults to highest level, eg. 1 in this case</span>
@@ -5561,18 +5783,18 @@ In&nbsp;[20]:
 <pre>
                     value     score
 date       type                    
-2014-02-16 Model-A      8  0.020874
-           Model-B      7  0.926256
-           Model-C      2  0.494278
-2014-02-17 Model-A      4  0.891048
-           Model-B      4  0.760260
-           Model-C      9  0.115907
-2014-02-18 Model-A      7  0.638869
-           Model-B      4  0.026314
-           Model-C      6  0.749919
-2014-02-19 Model-A      1  0.638298
-           Model-B      8  0.026485
-           Model-C      6  0.743300
+2014-02-16 Model-A      1  0.202855
+           Model-B      3  0.287901
+           Model-C      4  0.539970
+2014-02-17 Model-A      8  0.142716
+           Model-B      5  0.252482
+           Model-C      8  0.801581
+2014-02-18 Model-A      8  0.510448
+           Model-B      8  0.752879
+           Model-C      0  0.038923
+2014-02-19 Model-A      5  0.742021
+           Model-B      1  0.561749
+           Model-C      6  0.210681
 
 [12 rows x 2 columns]
 
@@ -5590,7 +5812,7 @@ date       type
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
@@ -5631,7 +5853,7 @@ date        type
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[18]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -5649,14 +5871,14 @@ In&nbsp;[22]:
 <pre>
 type               Model-A   Model-B   Model-C
 date                                          
-2014-02-16 value  8.000000  7.000000  2.000000
-           score  0.020874  0.926256  0.494278
-2014-02-17 value  4.000000  4.000000  9.000000
-           score  0.891048  0.760260  0.115907
-2014-02-18 value  7.000000  4.000000  6.000000
-           score  0.638869  0.026314  0.749919
-2014-02-19 value  1.000000  8.000000  6.000000
-           score  0.638298  0.026485  0.743300
+2014-02-16 value  1.000000  3.000000  4.000000
+           score  0.202855  0.287901  0.539970
+2014-02-17 value  8.000000  5.000000  8.000000
+           score  0.142716  0.252482  0.801581
+2014-02-18 value  8.000000  8.000000  0.000000
+           score  0.510448  0.752879  0.038923
+2014-02-19 value  5.000000  1.000000  6.000000
+           score  0.742021  0.561749  0.210681
 
 [8 rows x 3 columns]
 
@@ -5671,7 +5893,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[19]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">results</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
@@ -5690,10 +5912,10 @@ In&nbsp;[23]:
 type        Model-A            Model-B            Model-C          
               value     score    value     score    value     score
 date                                                               
-2014-02-16        8  0.020874        7  0.926256        2  0.494278
-2014-02-17        4  0.891048        4  0.760260        9  0.115907
-2014-02-18        7  0.638869        4  0.026314        6  0.749919
-2014-02-19        1  0.638298        8  0.026485        6  0.743300
+2014-02-16        1  0.202855        3  0.287901        4  0.539970
+2014-02-17        8  0.142716        5  0.252482        8  0.801581
+2014-02-18        8  0.510448        8  0.752879        0  0.038923
+2014-02-19        5  0.742021        1  0.561749        6  0.210681
 
 [4 rows x 6 columns]
 
@@ -5711,7 +5933,7 @@ date
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[20]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5725,7 +5947,7 @@ In&nbsp;[24]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[24]:</div>
+    Out[20]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -5745,36 +5967,36 @@ In&nbsp;[24]:
       <th>0</th>
       <td> 2014-02-16</td>
       <td> Model-A</td>
-      <td> 8</td>
-      <td> 0.020874</td>
+      <td> 1</td>
+      <td> 0.202855</td>
     </tr>
     <tr>
       <th>1</th>
       <td> 2014-02-16</td>
       <td> Model-B</td>
-      <td> 7</td>
-      <td> 0.926256</td>
+      <td> 3</td>
+      <td> 0.287901</td>
     </tr>
     <tr>
       <th>2</th>
       <td> 2014-02-16</td>
       <td> Model-C</td>
-      <td> 2</td>
-      <td> 0.494278</td>
+      <td> 4</td>
+      <td> 0.539970</td>
     </tr>
     <tr>
       <th>3</th>
       <td> 2014-02-17</td>
       <td> Model-A</td>
-      <td> 4</td>
-      <td> 0.891048</td>
+      <td> 8</td>
+      <td> 0.142716</td>
     </tr>
     <tr>
       <th>4</th>
       <td> 2014-02-17</td>
       <td> Model-B</td>
-      <td> 4</td>
-      <td> 0.760260</td>
+      <td> 5</td>
+      <td> 0.252482</td>
     </tr>
   </tbody>
 </table>
@@ -5792,7 +6014,7 @@ In&nbsp;[24]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[26]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s">&#39;date&#39;</span><span class="p">,</span><span class="s">&#39;type&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -5807,7 +6029,7 @@ In&nbsp;[26]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[26]:</div>
+    Out[21]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -5831,29 +6053,29 @@ In&nbsp;[26]:
     <tr>
       <th rowspan="3" valign="top">2014-02-16</th>
       <th>Model-A</th>
-      <td> 8</td>
-      <td> 0.020874</td>
+      <td> 1</td>
+      <td> 0.202855</td>
     </tr>
     <tr>
       <th>Model-B</th>
-      <td> 7</td>
-      <td> 0.926256</td>
+      <td> 3</td>
+      <td> 0.287901</td>
     </tr>
     <tr>
       <th>Model-C</th>
-      <td> 2</td>
-      <td> 0.494278</td>
+      <td> 4</td>
+      <td> 0.539970</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2014-02-17</th>
       <th>Model-A</th>
-      <td> 4</td>
-      <td> 0.891048</td>
+      <td> 8</td>
+      <td> 0.142716</td>
     </tr>
     <tr>
       <th>Model-B</th>
-      <td> 4</td>
-      <td> 0.760260</td>
+      <td> 5</td>
+      <td> 0.252482</td>
     </tr>
   </tbody>
 </table>
@@ -5874,7 +6096,7 @@ In&nbsp;[26]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[24]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s">&#39;2014-02-16&#39;</span><span class="p">]</span>
@@ -5888,7 +6110,7 @@ In&nbsp;[27]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
+    Out[24]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -5909,18 +6131,18 @@ In&nbsp;[27]:
   <tbody>
     <tr>
       <th>Model-A</th>
-      <td> 8</td>
-      <td> 0.020874</td>
+      <td> 1</td>
+      <td> 0.202855</td>
     </tr>
     <tr>
       <th>Model-B</th>
-      <td> 7</td>
-      <td> 0.926256</td>
+      <td> 3</td>
+      <td> 0.287901</td>
     </tr>
     <tr>
       <th>Model-C</th>
-      <td> 2</td>
-      <td> 0.494278</td>
+      <td> 4</td>
+      <td> 0.539970</td>
     </tr>
   </tbody>
 </table>
@@ -5938,7 +6160,7 @@ In&nbsp;[27]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[25]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">swaplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s">&#39;Model-A&#39;</span><span class="p">]</span>
@@ -5952,7 +6174,7 @@ In&nbsp;[28]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[28]:</div>
+    Out[25]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -5973,23 +6195,23 @@ In&nbsp;[28]:
   <tbody>
     <tr>
       <th>2014-02-16</th>
-      <td> 8</td>
-      <td> 0.020874</td>
+      <td> 1</td>
+      <td> 0.202855</td>
     </tr>
     <tr>
       <th>2014-02-17</th>
-      <td> 4</td>
-      <td> 0.891048</td>
+      <td> 8</td>
+      <td> 0.142716</td>
     </tr>
     <tr>
       <th>2014-02-18</th>
-      <td> 7</td>
-      <td> 0.638869</td>
+      <td> 8</td>
+      <td> 0.510448</td>
     </tr>
     <tr>
       <th>2014-02-19</th>
-      <td> 1</td>
-      <td> 0.638298</td>
+      <td> 5</td>
+      <td> 0.742021</td>
     </tr>
   </tbody>
 </table>
@@ -6007,7 +6229,7 @@ In&nbsp;[28]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[29]:
+In&nbsp;[26]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
@@ -6021,7 +6243,7 @@ In&nbsp;[29]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[29]:</div>
+    Out[26]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -6055,39 +6277,39 @@ In&nbsp;[29]:
   <tbody>
     <tr>
       <th>2014-02-16</th>
-      <td> 8</td>
-      <td> 7</td>
-      <td> 2</td>
-      <td> 0.020874</td>
-      <td> 0.926256</td>
-      <td> 0.494278</td>
+      <td> 1</td>
+      <td> 3</td>
+      <td> 4</td>
+      <td> 0.202855</td>
+      <td> 0.287901</td>
+      <td> 0.539970</td>
     </tr>
     <tr>
       <th>2014-02-17</th>
-      <td> 4</td>
-      <td> 4</td>
-      <td> 9</td>
-      <td> 0.891048</td>
-      <td> 0.760260</td>
-      <td> 0.115907</td>
+      <td> 8</td>
+      <td> 5</td>
+      <td> 8</td>
+      <td> 0.142716</td>
+      <td> 0.252482</td>
+      <td> 0.801581</td>
     </tr>
     <tr>
       <th>2014-02-18</th>
-      <td> 7</td>
-      <td> 4</td>
-      <td> 6</td>
-      <td> 0.638869</td>
-      <td> 0.026314</td>
-      <td> 0.749919</td>
+      <td> 8</td>
+      <td> 8</td>
+      <td> 0</td>
+      <td> 0.510448</td>
+      <td> 0.752879</td>
+      <td> 0.038923</td>
     </tr>
     <tr>
       <th>2014-02-19</th>
+      <td> 5</td>
       <td> 1</td>
-      <td> 8</td>
       <td> 6</td>
-      <td> 0.638298</td>
-      <td> 0.026485</td>
-      <td> 0.743300</td>
+      <td> 0.742021</td>
+      <td> 0.561749</td>
+      <td> 0.210681</td>
     </tr>
   </tbody>
 </table>
