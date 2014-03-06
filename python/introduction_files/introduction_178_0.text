@@ -1,0 +1,6 @@
+pos positional
+args 0 10
+args 1 20
+args 2 30
+kwargs a 40
+kwargs b 50

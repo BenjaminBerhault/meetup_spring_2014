@@ -1,0 +1,7 @@
+type        date  Model-A  Model-B  Model-C  Model-D
+0     2014-02-16        1        3      NaN       11
+1     2014-02-17        8        5        8      NaN
+2     2014-02-18        8        8        0        7
+3     2014-02-19        5        1        6      NaN
+
+[4 rows x 5 columns]

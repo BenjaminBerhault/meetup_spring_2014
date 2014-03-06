@@ -1,0 +1,9 @@
+<class 'pandas.core.series.Series'>
+210
+short_title
+$1,000,000 Duck           False
+'Night Mother             False
+'Til There Was You        False
+'burbs, The               False
+...And Justice for All    False
+Name: count, dtype: bool

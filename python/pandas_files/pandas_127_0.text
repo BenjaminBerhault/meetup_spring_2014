@@ -1,0 +1,8 @@
+         date     type  value     score
+0  2014-02-16  Model-A      1  0.202855
+1  2014-02-16  Model-B      3  0.287901
+2  2014-02-16  Model-C      4  0.539970
+3  2014-02-17  Model-A      8  0.142716
+4  2014-02-17  Model-B      5  0.252482
+
+[5 rows x 4 columns]

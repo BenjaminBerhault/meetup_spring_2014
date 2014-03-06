@@ -1,0 +1,10 @@
+['agg.path.chunksize',
+ 'animation.avconv_args',
+ 'animation.avconv_path',
+ 'animation.bitrate',
+ 'animation.codec',
+ 'animation.convert_args',
+ 'animation.convert_path',
+ 'animation.ffmpeg_args',
+ 'animation.ffmpeg_path',
+ 'animation.frame_format']

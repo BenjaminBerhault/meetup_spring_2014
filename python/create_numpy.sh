@@ -5,4 +5,5 @@ cp ../../master/notebooks/img/* img
 mv test.ipynb numpy.ipynb
 
 create_stack.py numpy.ipynb
+ipython nbconvert --to rst numpy.ipynb
 rm numpy.ipynb

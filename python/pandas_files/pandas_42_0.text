@@ -1,0 +1,8 @@
+type       Model-A Model-B Model-C Model-D
+date                                      
+2014-02-16   False   False    True   False
+2014-02-17   False   False   False    True
+2014-02-18   False   False   False   False
+2014-02-19   False   False   False    True
+
+[4 rows x 4 columns]

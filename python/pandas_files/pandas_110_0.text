@@ -1,0 +1,14 @@
+gender                                       F         M      diff
+short_title                                                       
+Jerry Maguire                         3.758315  3.759424  0.001109
+Indiana Jones and the Temple of Doom  3.674312  3.676568  0.002256
+Good Will Hunting                     4.174672  4.177064  0.002392
+Fugitive, The                         4.100457  4.104046  0.003590
+Batman Returns                        2.980100  2.975904  0.004196
+Usual Suspects, The                   4.513317  4.518248  0.004931
+Green Mile, The                       4.159722  4.153105  0.006617
+Boogie Nights                         3.763838  3.771295  0.007458
+Chicken Run                           3.885559  3.877339  0.008220
+Blair Witch Project, The              3.038732  3.029381  0.009351
+
+[10 rows x 3 columns]

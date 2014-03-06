@@ -1,0 +1,12 @@
+user_id
+movie_id
+rating
+timestamp
+gender
+age
+occupation
+zip
+title
+genres
+year
+short_title

@@ -1,0 +1,16 @@
+          date     type  value
+0   2014-02-16  Model-A      1
+1   2014-02-17  Model-A      8
+2   2014-02-18  Model-A      8
+3   2014-02-19  Model-A      5
+4   2014-02-16  Model-B      3
+5   2014-02-17  Model-B      5
+6   2014-02-18  Model-B      8
+7   2014-02-19  Model-B      1
+9   2014-02-17  Model-C      8
+10  2014-02-18  Model-C      0
+11  2014-02-19  Model-C      6
+12  2014-02-16  Model-D     11
+14  2014-02-18  Model-D      7
+
+[13 rows x 3 columns]

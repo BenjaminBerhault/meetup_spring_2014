@@ -1,0 +1,7 @@
+Help on built-in function pow in module math:
+
+pow(...)
+    pow(x, y)
+    
+    Return x**y (x to the power of y).
+

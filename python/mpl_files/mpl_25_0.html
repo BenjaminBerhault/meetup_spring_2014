@@ -1,0 +1,37 @@
+
+<style>
+
+</style>
+
+<div id="fig1324144129893928944055602"></div>
+<script>
+function mpld3_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+function create_fig1324144129893928944055602(){
+  
+  mpld3.draw_figure("fig1324144129893928944055602", {"width": 640.0, "axes": [{"xlim": [0.0, 1.0], "yscale": "linear", "axesbg": "#FFFFFF", "texts": [], "zoomable": true, "images": [], "xdomain": [0.0, 1.0], "ylim": [0.0, 1.0], "paths": [], "sharey": [], "sharex": [], "axesbgalpha": null, "axes": [{"grid": {"gridOn": false}, "position": "bottom", "nticks": 6, "tickvalues": null, "tickformat": null}, {"grid": {"gridOn": false}, "position": "left", "nticks": 6, "tickvalues": null, "tickformat": null}], "lines": [], "markers": [], "id": "132414412985744", "ydomain": [0.0, 1.0], "collections": [], "xscale": "linear", "bbox": [0.051426866319444445, 0.7050925925925926, 0.91740858289930549, 0.25949074074074074]}, {"xlim": [0.0, 1.0], "yscale": "linear", "axesbg": "#FFFFFF", "texts": [], "zoomable": true, "images": [], "xdomain": [0.0, 1.0], "ylim": [0.0, 1.0], "paths": [], "sharey": [], "sharex": [], "axesbgalpha": null, "axes": [{"grid": {"gridOn": false}, "position": "bottom", "nticks": 6, "tickvalues": null, "tickformat": null}, {"grid": {"gridOn": false}, "position": "left", "nticks": 6, "tickvalues": null, "tickformat": null}], "lines": [], "markers": [], "id": "132414412931984", "ydomain": [0.0, 1.0], "collections": [], "xscale": "linear", "bbox": [0.051426866319444445, 0.38009259259259265, 0.5903252495659721, 0.25949074074074063]}, {"xlim": [0.0, 1.0], "yscale": "linear", "axesbg": "#FFFFFF", "texts": [], "zoomable": true, "images": [], "xdomain": [0.0, 1.0], "ylim": [0.0, 1.0], "paths": [], "sharey": [], "sharex": [], "axesbgalpha": null, "axes": [{"grid": {"gridOn": false}, "position": "bottom", "nticks": 6, "tickvalues": null, "tickformat": null}, {"grid": {"gridOn": false}, "position": "left", "nticks": 6, "tickvalues": null, "tickformat": null}], "lines": [], "markers": [], "id": "132414393674064", "ydomain": [0.0, 1.0], "collections": [], "xscale": "linear", "bbox": [0.70559353298611116, 0.055092592592592693, 0.26324191623263882, 0.58449074074074059]}, {"xlim": [0.0, 1.0], "yscale": "linear", "axesbg": "#FFFFFF", "texts": [], "zoomable": true, "images": [], "xdomain": [0.0, 1.0], "ylim": [0.0, 1.0], "paths": [], "sharey": [], "sharex": [], "axesbgalpha": null, "axes": [{"grid": {"gridOn": false}, "position": "bottom", "nticks": 6, "tickvalues": null, "tickformat": null}, {"grid": {"gridOn": false}, "position": "left", "nticks": 6, "tickvalues": null, "tickformat": null}], "lines": [], "markers": [], "id": "132414413062672", "ydomain": [0.0, 1.0], "collections": [], "xscale": "linear", "bbox": [0.051426866319444445, 0.055092592592592693, 0.26324191623263876, 0.25949074074074063]}, {"xlim": [0.0, 1.0], "yscale": "linear", "axesbg": "#FFFFFF", "texts": [], "zoomable": true, "images": [], "xdomain": [0.0, 1.0], "ylim": [0.0, 1.0], "paths": [], "sharey": [], "sharex": [], "axesbgalpha": null, "axes": [{"grid": {"gridOn": false}, "position": "bottom", "nticks": 6, "tickvalues": null, "tickformat": null}, {"grid": {"gridOn": false}, "position": "left", "nticks": 6, "tickvalues": null, "tickformat": null}], "lines": [], "markers": [], "id": "132414413195920", "ydomain": [0.0, 1.0], "collections": [], "xscale": "linear", "bbox": [0.37851019965277771, 0.055092592592592693, 0.26324191623263887, 0.25949074074074063]}], "data": {}, "id": "132414412989392", "toolbar": ["reset", "move"], "height": 480.0});
+}
+
+if(typeof(mpld3) !== "undefined"){
+   // already loaded: just create the figure
+   create_fig1324144129893928944055602();
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/mpld3
+   require.config({paths: {d3: "http://d3js.org/d3.v3.min"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      mpld3_load_lib("http://mpld3.github.io/js/mpld3.v0.1.js", create_fig1324144129893928944055602);
+    });
+}else{
+    // require.js not available: dynamically load d3 & mpld3
+    mpld3_load_lib("http://d3js.org/d3.v3.min.js", function(){
+        mpld3_load_lib("http://mpld3.github.io/js/mpld3.v0.1.js", create_fig1324144129893928944055602);})
+}
+</script>

@@ -1,0 +1,2 @@
+10000 loops, best of 3: 18.6 µs per loop
+100 loops, best of 3: 4.27 ms per loop

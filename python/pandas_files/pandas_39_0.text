@@ -1,0 +1,6 @@
+type
+Model-A    4
+Model-B    4
+Model-C    3
+Model-D    2
+dtype: int64

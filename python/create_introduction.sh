@@ -9,5 +9,7 @@ cp  ../../master/notebooks/img/* img
 mv test.ipynb introduction.ipynb
 
 create_stack.py introduction.ipynb
+ipython nbconvert --to rst introduction.ipynb
+
 rm introduction.ipynb
 
