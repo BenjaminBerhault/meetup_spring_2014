@@ -63,6 +63,16 @@
 #     - Just-in-time: e.g. <a href="http://numba.pydata.org/">numba</a>
 # * Implementing the built-in Python modules would require some advanced programming skills in other languages
 
+# In[1]:
+
+print "hello"
+
+
+# Out[1]:
+
+#     hello
+# 
+
 # ##Python environments
 # 
 # * [CPython](http://en.wikipedia.org/wiki/CPython): the standard interpreter.

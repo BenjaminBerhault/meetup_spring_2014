@@ -84,14 +84,14 @@
 # 
 # Based on [Data Wrangling Kung Fu with Pandas](vimeo.com/63295598) by Wes McKinney
 
-# In[360]:
+# In[1]:
 
 import os
 import pandas as  pd
 import numpy as np
 
 
-# In[361]:
+# In[2]:
 
 dates = ['2014-02-16', '2014-02-17', '2014-02-18', '2014-02-19']
 algs = ['Model-A','Model-B','Model-C']
@@ -107,56 +107,55 @@ with open(filename,'w') as outfile:
             outfile.write(tmp)
 
 
-# In[362]:
+# In[3]:
 
 with open(filename, 'r') as infile:
     print infile.read()
 
 
-# Out[362]:
+# Out[3]:
 
 #     date,type,value
-#     2014-02-16,Model-A,8
-#     2014-02-16,Model-B,7
-#     2014-02-16,Model-C,2
-#     2014-02-17,Model-A,4
-#     2014-02-17,Model-B,4
-#     2014-02-17,Model-C,9
-#     2014-02-18,Model-A,7
-#     2014-02-18,Model-B,4
-#     2014-02-18,Model-C,6
-#     2014-02-19,Model-A,1
-#     2014-02-19,Model-B,8
+#     2014-02-16,Model-A,1
+#     2014-02-16,Model-B,3
+#     2014-02-16,Model-C,4
+#     2014-02-17,Model-A,8
+#     2014-02-17,Model-B,5
+#     2014-02-17,Model-C,8
+#     2014-02-18,Model-A,8
+#     2014-02-18,Model-B,8
+#     2014-02-18,Model-C,0
+#     2014-02-19,Model-A,5
+#     2014-02-19,Model-B,1
 #     2014-02-19,Model-C,6
 #     
 # 
 
 # ### Creating a `DataFrame`
 
-# In[363]:
+# In[5]:
 
 df = pd.read_csv(filename)
-print df
+df
 
 
-# Out[363]:
+# Out[5]:
 
 #               date     type  value
-#     0   2014-02-16  Model-A      8
-#     1   2014-02-16  Model-B      7
-#     2   2014-02-16  Model-C      2
-#     3   2014-02-17  Model-A      4
-#     4   2014-02-17  Model-B      4
-#     5   2014-02-17  Model-C      9
-#     6   2014-02-18  Model-A      7
-#     7   2014-02-18  Model-B      4
-#     8   2014-02-18  Model-C      6
-#     9   2014-02-19  Model-A      1
-#     10  2014-02-19  Model-B      8
+#     0   2014-02-16  Model-A      1
+#     1   2014-02-16  Model-B      3
+#     2   2014-02-16  Model-C      4
+#     3   2014-02-17  Model-A      8
+#     4   2014-02-17  Model-B      5
+#     5   2014-02-17  Model-C      8
+#     6   2014-02-18  Model-A      8
+#     7   2014-02-18  Model-B      8
+#     8   2014-02-18  Model-C      0
+#     9   2014-02-19  Model-A      5
+#     10  2014-02-19  Model-B      1
 #     11  2014-02-19  Model-C      6
 #     
 #     [12 rows x 3 columns]
-# 
 
 # **Why store it this way?**
 # 
@@ -168,108 +167,108 @@ print df
 # - Question: What is the average value for each date?
 # - How many observations do I have for each model?
 
-# In[364]:
+# In[6]:
 
 results = df.pivot('date', 'type', 'value') #row, column, values (optional)
 print results
 
 
-# Out[364]:
+# Out[6]:
 
 #     type        Model-A  Model-B  Model-C
 #     date                                 
-#     2014-02-16        8        7        2
-#     2014-02-17        4        4        9
-#     2014-02-18        7        4        6
-#     2014-02-19        1        8        6
+#     2014-02-16        1        3        4
+#     2014-02-17        8        5        8
+#     2014-02-18        8        8        0
+#     2014-02-19        5        1        6
 #     
 #     [4 rows x 3 columns]
 # 
 
-# In[365]:
+# In[7]:
 
 results.columns
 
 
-# Out[365]:
+# Out[7]:
 
 #     Index([u'Model-A', u'Model-B', u'Model-C'], dtype='object')
 
-# In[366]:
+# In[8]:
 
 results.index
 
 
-# Out[366]:
+# Out[8]:
 
 #     Index([u'2014-02-16', u'2014-02-17', u'2014-02-18', u'2014-02-19'], dtype='object')
 
 # ###Columns access
 
-# In[367]:
+# In[9]:
 
 results['Model-A']
 
 
-# Out[367]:
+# Out[9]:
 
 #     date
-#     2014-02-16    8
-#     2014-02-17    4
-#     2014-02-18    7
-#     2014-02-19    1
+#     2014-02-16    1
+#     2014-02-17    8
+#     2014-02-18    8
+#     2014-02-19    5
 #     Name: Model-A, dtype: int64
 
-# In[368]:
+# In[10]:
 
 results['Model-A'].values
 
 
-# Out[368]:
+# Out[10]:
 
-#     array([8, 4, 7, 1])
+#     array([1, 8, 8, 5])
 
 # ###Row access
 
-# In[369]:
+# In[11]:
 
 results.ix[0]
 
 
-# Out[369]:
+# Out[11]:
 
 #     type
-#     Model-A    8
-#     Model-B    7
-#     Model-C    2
+#     Model-A    1
+#     Model-B    3
+#     Model-C    4
 #     Name: 2014-02-16, dtype: int64
 
-# In[370]:
+# In[12]:
 
 results.ix['2014-02-16']
 
 
-# Out[370]:
+# Out[12]:
 
 #     type
-#     Model-A    8
-#     Model-B    7
-#     Model-C    2
+#     Model-A    1
+#     Model-B    3
+#     Model-C    4
 #     Name: 2014-02-16, dtype: int64
 
 # ###Range access
 
-# In[372]:
+# In[13]:
 
 print results.ix[2:4,1:]
 
 
-# Out[372]:
+# Out[13]:
 
 #     type        Model-B  Model-C
 #     date                        
-#     2014-02-18        4        6
-#     2014-02-19        8        6
+#     2014-02-18        8        0
+#     2014-02-19        1        6
 #     
 #     [2 rows x 2 columns]
 # 
@@ -278,28 +277,28 @@ print results.ix[2:4,1:]
 # 
 # Question: What is the average value for each date?
 
-# In[373]:
+# In[14]:
 
 results.mean(axis=1)
 
 
-# Out[373]:
+# Out[14]:
 
 #     date
-#     2014-02-16    5.666667
-#     2014-02-17    5.666667
-#     2014-02-18    5.666667
-#     2014-02-19    5.000000
+#     2014-02-16    2.666667
+#     2014-02-17    7.000000
+#     2014-02-18    5.333333
+#     2014-02-19    4.000000
 #     dtype: float64
 
 # How many observations do I have for each model?
 
-# In[374]:
+# In[15]:
 
 results.count(axis=0)
 
 
-# Out[374]:
+# Out[15]:
 
 #     type
 #     Model-A    4
@@ -309,7 +308,7 @@ results.count(axis=0)
 
 # ### Add some data with `pd.concat`
 
-# In[375]:
+# In[16]:
 
 df = pd.read_csv(filename)
 tmp = {'date': ['2014-02-16','2014-02-18'],
@@ -319,7 +318,7 @@ tmp = {'date': ['2014-02-16','2014-02-18'],
 pd.DataFrame(tmp)
 
 
-# Out[375]:
+# Out[16]:
 
 #              date     type  value
 #     0  2014-02-16  Model-D     11
@@ -327,95 +326,95 @@ pd.DataFrame(tmp)
 #     
 #     [2 rows x 3 columns]
 
-# In[376]:
+# In[17]:
 
 df = pd.concat([df,pd.DataFrame(tmp)], ignore_index=True)
 df.shape
 
 
-# Out[376]:
+# Out[17]:
 
 #     (14, 3)
 
 # ### Delete a row
 
-# In[377]:
+# In[18]:
 
 df.drop(2, axis=0).head()
 
 
-# Out[377]:
+# Out[18]:
 
 #              date     type  value
-#     0  2014-02-16  Model-A      8
-#     1  2014-02-16  Model-B      7
-#     3  2014-02-17  Model-A      4
-#     4  2014-02-17  Model-B      4
-#     5  2014-02-17  Model-C      9
+#     0  2014-02-16  Model-A      1
+#     1  2014-02-16  Model-B      3
+#     3  2014-02-17  Model-A      8
+#     4  2014-02-17  Model-B      5
+#     5  2014-02-17  Model-C      8
 #     
 #     [5 rows x 3 columns]
 
-# In[378]:
+# In[19]:
 
 df.drop(2, inplace=True)
 
 
-# In[379]:
+# In[20]:
 
 df.drop('type', axis=1).head()
 
 
-# Out[379]:
+# Out[20]:
 
 #              date  value
-#     0  2014-02-16      8
-#     1  2014-02-16      7
-#     3  2014-02-17      4
-#     4  2014-02-17      4
-#     5  2014-02-17      9
+#     0  2014-02-16      1
+#     1  2014-02-16      3
+#     3  2014-02-17      8
+#     4  2014-02-17      5
+#     5  2014-02-17      8
 #     
 #     [5 rows x 2 columns]
 
 # ### Let's `reshape` again...
 
-# In[380]:
+# In[21]:
 
 results = df.pivot('date','type', 'value')
 print results
 
 
-# Out[380]:
+# Out[21]:
 
 #     type        Model-A  Model-B  Model-C  Model-D
 #     date                                          
-#     2014-02-16        8        7      NaN       11
-#     2014-02-17        4        4        9      NaN
-#     2014-02-18        7        4        6        7
-#     2014-02-19        1        8        6      NaN
+#     2014-02-16        1        3      NaN       11
+#     2014-02-17        8        5        8      NaN
+#     2014-02-18        8        8        0        7
+#     2014-02-19        5        1        6      NaN
 #     
 #     [4 rows x 4 columns]
 # 
 
-# In[381]:
+# In[22]:
 
 results.mean(axis=1)
 
 
-# Out[381]:
+# Out[22]:
 
 #     date
-#     2014-02-16    8.666667
-#     2014-02-17    5.666667
-#     2014-02-18    6.000000
-#     2014-02-19    5.000000
+#     2014-02-16    5.00
+#     2014-02-17    7.00
+#     2014-02-18    5.75
+#     2014-02-19    4.00
 #     dtype: float64
 
-# In[382]:
+# In[23]:
 
 results.count(axis=0)
 
 
-# Out[382]:
+# Out[23]:
 
 #     type
 #     Model-A    4
@@ -424,12 +423,12 @@ results.count(axis=0)
 #     Model-D    2
 #     dtype: int64
 
-# In[383]:
+# In[24]:
 
 results.count(axis=1)
 
 
-# Out[383]:
+# Out[24]:
 
 #     date
 #     2014-02-16    3
@@ -440,12 +439,12 @@ results.count(axis=1)
 
 # ###Missing vales: `isnull()` and `fillna()`
 
-# In[384]:
+# In[27]:
 
 print results.isnull()
 
 
-# Out[384]:
+# Out[27]:
 
 #     type       Model-A Model-B Model-C Model-D
 #     date                                      
@@ -457,180 +456,180 @@ print results.isnull()
 #     [4 rows x 4 columns]
 # 
 
-# In[385]:
+# In[28]:
 
 print results.fillna(0)
 
 
-# Out[385]:
+# Out[28]:
 
 #     type        Model-A  Model-B  Model-C  Model-D
 #     date                                          
-#     2014-02-16        8        7        0       11
-#     2014-02-17        4        4        9        0
-#     2014-02-18        7        4        6        7
-#     2014-02-19        1        8        6        0
+#     2014-02-16        1        3        0       11
+#     2014-02-17        8        5        8        0
+#     2014-02-18        8        8        0        7
+#     2014-02-19        5        1        6        0
 #     
 #     [4 rows x 4 columns]
 # 
 
-# In[386]:
+# In[29]:
 
 print results
 
 
-# Out[386]:
+# Out[29]:
 
 #     type        Model-A  Model-B  Model-C  Model-D
 #     date                                          
-#     2014-02-16        8        7      NaN       11
-#     2014-02-17        4        4        9      NaN
-#     2014-02-18        7        4        6        7
-#     2014-02-19        1        8        6      NaN
+#     2014-02-16        1        3      NaN       11
+#     2014-02-17        8        5        8      NaN
+#     2014-02-18        8        8        0        7
+#     2014-02-19        5        1        6      NaN
 #     
 #     [4 rows x 4 columns]
 # 
 
-# In[387]:
+# In[30]:
 
 tmp = results.copy()
 
 
-# In[388]:
+# In[31]:
 
 tmp.fillna(0, inplace=True)
 print tmp
 
 
-# Out[388]:
+# Out[31]:
 
 #     type        Model-A  Model-B  Model-C  Model-D
 #     date                                          
-#     2014-02-16        8        7        0       11
-#     2014-02-17        4        4        9        0
-#     2014-02-18        7        4        6        7
-#     2014-02-19        1        8        6        0
+#     2014-02-16        1        3        0       11
+#     2014-02-17        8        5        8        0
+#     2014-02-18        8        8        0        7
+#     2014-02-19        5        1        6        0
 #     
 #     [4 rows x 4 columns]
 # 
 
 # ### `reset_index`
 
-# In[389]:
+# In[32]:
 
 tmp.reset_index(inplace=True)
 tmp.columns
 
 
-# Out[389]:
+# Out[32]:
 
 #     Index([u'date', u'Model-A', u'Model-B', u'Model-C', u'Model-D'], dtype='object')
 
-# In[390]:
+# In[33]:
 
 print tmp
 
 
-# Out[390]:
+# Out[33]:
 
 #     type        date  Model-A  Model-B  Model-C  Model-D
-#     0     2014-02-16        8        7        0       11
-#     1     2014-02-17        4        4        9        0
-#     2     2014-02-18        7        4        6        7
-#     3     2014-02-19        1        8        6        0
+#     0     2014-02-16        1        3        0       11
+#     1     2014-02-17        8        5        8        0
+#     2     2014-02-18        8        8        0        7
+#     3     2014-02-19        5        1        6        0
 #     
 #     [4 rows x 5 columns]
 # 
 
 # ### Convert to a `numpy` array
 
-# In[391]:
+# In[34]:
 
 print tmp.set_index('date')
 
 
-# Out[391]:
+# Out[34]:
 
 #                 Model-A  Model-B  Model-C  Model-D
 #     date                                          
-#     2014-02-16        8        7        0       11
-#     2014-02-17        4        4        9        0
-#     2014-02-18        7        4        6        7
-#     2014-02-19        1        8        6        0
+#     2014-02-16        1        3        0       11
+#     2014-02-17        8        5        8        0
+#     2014-02-18        8        8        0        7
+#     2014-02-19        5        1        6        0
 #     
 #     [4 rows x 4 columns]
 # 
 
-# In[392]:
+# In[35]:
 
 X = tmp.set_index('date').as_matrix()
 X
 
 
-# Out[392]:
+# Out[35]:
 
-#     array([[  8.,   7.,   0.,  11.],
-#            [  4.,   4.,   9.,   0.],
-#            [  7.,   4.,   6.,   7.],
-#            [  1.,   8.,   6.,   0.]])
+#     array([[  1.,   3.,   0.,  11.],
+#            [  8.,   5.,   8.,   0.],
+#            [  8.,   8.,   0.,   7.],
+#            [  5.,   1.,   6.,   0.]])
 
 # ### Reshape with `melt`
 
-# In[393]:
+# In[36]:
 
 results = df.pivot('date','type', 'value')
 print results
 
 
-# Out[393]:
+# Out[36]:
 
 #     type        Model-A  Model-B  Model-C  Model-D
 #     date                                          
-#     2014-02-16        8        7      NaN       11
-#     2014-02-17        4        4        9      NaN
-#     2014-02-18        7        4        6        7
-#     2014-02-19        1        8        6      NaN
+#     2014-02-16        1        3      NaN       11
+#     2014-02-17        8        5        8      NaN
+#     2014-02-18        8        8        0        7
+#     2014-02-19        5        1        6      NaN
 #     
 #     [4 rows x 4 columns]
 # 
 
-# In[394]:
+# In[37]:
 
 results.reset_index(inplace=True)
 print results
 
 
-# Out[394]:
+# Out[37]:
 
 #     type        date  Model-A  Model-B  Model-C  Model-D
-#     0     2014-02-16        8        7      NaN       11
-#     1     2014-02-17        4        4        9      NaN
-#     2     2014-02-18        7        4        6        7
-#     3     2014-02-19        1        8        6      NaN
+#     0     2014-02-16        1        3      NaN       11
+#     1     2014-02-17        8        5        8      NaN
+#     2     2014-02-18        8        8        0        7
+#     3     2014-02-19        5        1        6      NaN
 #     
 #     [4 rows x 5 columns]
 # 
 
-# In[395]:
+# In[38]:
 
 back = pd.melt(results, id_vars=['date'])
 print back
 
 
-# Out[395]:
+# Out[38]:
 
 #               date     type  value
-#     0   2014-02-16  Model-A      8
-#     1   2014-02-17  Model-A      4
-#     2   2014-02-18  Model-A      7
-#     3   2014-02-19  Model-A      1
-#     4   2014-02-16  Model-B      7
-#     5   2014-02-17  Model-B      4
-#     6   2014-02-18  Model-B      4
-#     7   2014-02-19  Model-B      8
+#     0   2014-02-16  Model-A      1
+#     1   2014-02-17  Model-A      8
+#     2   2014-02-18  Model-A      8
+#     3   2014-02-19  Model-A      5
+#     4   2014-02-16  Model-B      3
+#     5   2014-02-17  Model-B      5
+#     6   2014-02-18  Model-B      8
+#     7   2014-02-19  Model-B      1
 #     8   2014-02-16  Model-C    NaN
-#     9   2014-02-17  Model-C      9
-#     10  2014-02-18  Model-C      6
+#     9   2014-02-17  Model-C      8
+#     10  2014-02-18  Model-C      0
 #     11  2014-02-19  Model-C      6
 #     12  2014-02-16  Model-D     11
 #     13  2014-02-17  Model-D    NaN
@@ -642,28 +641,36 @@ print back
 
 # ### `dropna()`
 
-# In[396]:
+# In[40]:
 
-back.dropna(axis=0).head()
+back.dropna(axis=0)
 
 
-# Out[396]:
+# Out[40]:
 
-#              date     type  value
-#     0  2014-02-16  Model-A      8
-#     1  2014-02-17  Model-A      4
-#     2  2014-02-18  Model-A      7
-#     3  2014-02-19  Model-A      1
-#     4  2014-02-16  Model-B      7
+#               date     type  value
+#     0   2014-02-16  Model-A      1
+#     1   2014-02-17  Model-A      8
+#     2   2014-02-18  Model-A      8
+#     3   2014-02-19  Model-A      5
+#     4   2014-02-16  Model-B      3
+#     5   2014-02-17  Model-B      5
+#     6   2014-02-18  Model-B      8
+#     7   2014-02-19  Model-B      1
+#     9   2014-02-17  Model-C      8
+#     10  2014-02-18  Model-C      0
+#     11  2014-02-19  Model-C      6
+#     12  2014-02-16  Model-D     11
+#     14  2014-02-18  Model-D      7
 #     
-#     [5 rows x 3 columns]
+#     [13 rows x 3 columns]
 
-# In[397]:
+# In[41]:
 
 back.dropna(axis=1).head()
 
 
-# Out[397]:
+# Out[41]:
 
 #              date     type
 #     0  2014-02-16  Model-A
@@ -676,34 +683,34 @@ back.dropna(axis=1).head()
 
 # ### Write to file `to_csv`
 
-# In[398]:
+# In[42]:
 
 back.dropna(axis=0, inplace=True)
 
 
-# In[399]:
+# In[43]:
 
 back.to_csv('back.csv', index=False)
 
 
-# In[400]:
+# In[44]:
 
 print open('back.csv').read()
 
 
-# Out[400]:
+# Out[44]:
 
 #     date,type,value
-#     2014-02-16,Model-A,8.0
-#     2014-02-17,Model-A,4.0
-#     2014-02-18,Model-A,7.0
-#     2014-02-19,Model-A,1.0
-#     2014-02-16,Model-B,7.0
-#     2014-02-17,Model-B,4.0
-#     2014-02-18,Model-B,4.0
-#     2014-02-19,Model-B,8.0
-#     2014-02-17,Model-C,9.0
-#     2014-02-18,Model-C,6.0
+#     2014-02-16,Model-A,1.0
+#     2014-02-17,Model-A,8.0
+#     2014-02-18,Model-A,8.0
+#     2014-02-19,Model-A,5.0
+#     2014-02-16,Model-B,3.0
+#     2014-02-17,Model-B,5.0
+#     2014-02-18,Model-B,8.0
+#     2014-02-19,Model-B,1.0
+#     2014-02-17,Model-C,8.0
+#     2014-02-18,Model-C,0.0
 #     2014-02-19,Model-C,6.0
 #     2014-02-16,Model-D,11.0
 #     2014-02-18,Model-D,7.0

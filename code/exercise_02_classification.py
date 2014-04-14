@@ -12,33 +12,42 @@
 # - The known set of classes is often called the *training data*.  
 # - We test the classifiers effectiveness on the *test data*.
 
-# In[21]:
+# In[2]:
 
 import os
+import numpy as np
 filename = os.path.join('data','iris_train.csv')
 train = np.loadtxt(filename, delimiter=',', usecols=(0,1,2,3), skiprows=1)
 train_label = np.loadtxt(filename, delimiter=',', usecols=(4,), skiprows=1, dtype=str)
 
 
-# In[22]:
+# In[8]:
 
-print iris[1:5,]
+print train[1:5,]
+print train.shape
+print train[:5,]
 
 
-# Out[22]:
+# Out[8]:
 
 #     [[ 4.9  3.   1.4  0.2]
 #      [ 4.7  3.2  1.3  0.2]
 #      [ 4.6  3.1  1.5  0.2]
-#      [ 5.   3.6  1.4  0.2]]
+#      [ 5.   3.4  1.5  0.2]]
+#     (135, 4)
+#     [[ 5.1  3.5  1.4  0.2]
+#      [ 4.9  3.   1.4  0.2]
+#      [ 4.7  3.2  1.3  0.2]
+#      [ 4.6  3.1  1.5  0.2]
+#      [ 5.   3.4  1.5  0.2]]
 # 
 
-# In[24]:
+# In[6]:
 
 print np.unique(train_label)
 
 
-# Out[24]:
+# Out[6]:
 
 #     ['Iris-setosa' 'Iris-versicolor' 'Iris-virginica']
 # 

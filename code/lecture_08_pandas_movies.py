@@ -13,7 +13,7 @@
 # - That appeals to both `M` and `F`
 # 
 
-# In[250]:
+# In[1]:
 
 import os
 import pandas as pd
@@ -21,7 +21,7 @@ import pandas as pd
 
 # ### Read in the movie data: `pd.read_table`
 
-# In[241]:
+# In[2]:
 
 def get_movie_data():
     
@@ -40,17 +40,17 @@ def get_movie_data():
     return users, ratings, movies
 
 
-# In[242]:
+# In[3]:
 
 users, ratings, movies = get_movie_data()
 
 
-# In[243]:
+# In[4]:
 
 print users.head()
 
 
-# Out[243]:
+# Out[4]:
 
 #        user_id gender  age  occupation    zip
 #     0        1      F    1          10  48067
@@ -62,12 +62,12 @@ print users.head()
 #     [5 rows x 5 columns]
 # 
 
-# In[244]:
+# In[5]:
 
 print ratings.head()
 
 
-# Out[244]:
+# Out[5]:
 
 #        user_id  movie_id  rating  timestamp
 #     0        1      1193       5  978300760
@@ -79,12 +79,12 @@ print ratings.head()
 #     [5 rows x 4 columns]
 # 
 
-# In[245]:
+# In[6]:
 
 print movies.head()
 
 
-# Out[245]:
+# Out[6]:
 
 #        movie_id                               title                        genres
 #     0         1                    Toy Story (1995)   Animation|Children's|Comedy
@@ -103,7 +103,7 @@ print movies.head()
 # 
 # This is dense code. Skip.
 
-# In[246]:
+# In[7]:
 
 tmp = movies.title.str.match('(.*) \(([0-9]+)\)')
 movies['year'] = tmp.map(lambda x: x[1] if len(x) > 0 else None)
@@ -112,18 +112,18 @@ movies['short_title'] = tmp.map(lambda x: x[0][:40] if len(x) > 0 else None)
 
 # ### Join the tables with `pd.merge`
 
-# In[247]:
+# In[8]:
 
 data = pd.merge(pd.merge(ratings, users), movies)
 
 
-# In[248]:
+# In[9]:
 
 for c in data.columns:
     print c
 
 
-# Out[248]:
+# Out[9]:
 
 #     user_id
 #     movie_id
@@ -141,13 +141,14 @@ for c in data.columns:
 
 # ### What's the highest rated movie?
 
-# In[253]:
+# In[14]:
 
 tmp = data[['short_title','rating']]
 print tmp.head()
+print len(tmp)
 
 
-# Out[253]:
+# Out[14]:
 
 #                            short_title  rating
 #     0  One Flew Over the Cuckoo's Nest       5
@@ -157,34 +158,35 @@ print tmp.head()
 #     4  One Flew Over the Cuckoo's Nest       5
 #     
 #     [5 rows x 2 columns]
+#     1000209
 # 
 
 # ### Summary operations with `groupby`
 
-# In[254]:
+# In[15]:
 
 grp = tmp.groupby('short_title')
 
 
-# In[255]:
+# In[16]:
 
 print type(grp)
 
 
-# Out[255]:
+# Out[16]:
 
 #     <class 'pandas.core.groupby.DataFrameGroupBy'>
 # 
 
 # Summary with `describe()`
 
-# In[257]:
+# In[17]:
 
 mean_rating = grp.mean()
 print mean_rating.describe()
 
 
-# Out[257]:
+# Out[17]:
 
 #                 rating
 #     count  3664.000000
@@ -199,12 +201,12 @@ print mean_rating.describe()
 #     [8 rows x 1 columns]
 # 
 
-# In[258]:
+# In[18]:
 
 print mean_rating.head()
 
 
-# Out[258]:
+# Out[18]:
 
 #                               rating
 #     short_title                     
@@ -221,12 +223,12 @@ print mean_rating.head()
 
 # Sort by `ratings` using the `sort()` method.
 
-# In[261]:
+# In[19]:
 
 print mean_rating.sort('rating', ascending=False).head(10)
 
 
-# Out[261]:
+# Out[19]:
 
 #                                         rating
 #     short_title                               
@@ -246,13 +248,13 @@ print mean_rating.sort('rating', ascending=False).head(10)
 
 # Apply more than one function to the group with the `agg()` method.
 
-# In[262]:
+# In[20]:
 
 mean_rating = grp['rating'].agg(['mean','count'])
 print mean_rating.sort('mean', ascending=False).head(10)
 
 
-# Out[262]:
+# Out[20]:
 
 #                                         mean  count
 #     short_title                                    
@@ -272,7 +274,7 @@ print mean_rating.sort('mean', ascending=False).head(10)
 
 # ### Threshold on the number of ratings
 
-# In[263]:
+# In[21]:
 
 mask = mean_rating['count'] > 1000
 
@@ -281,7 +283,7 @@ print sum(mask)
 print mask.head()
 
 
-# Out[263]:
+# Out[21]:
 
 #     <class 'pandas.core.series.Series'>
 #     210
@@ -294,12 +296,12 @@ print mask.head()
 #     Name: count, dtype: bool
 # 
 
-# In[264]:
+# In[22]:
 
 print mean_rating.ix[mask].head()
 
 
-# Out[264]:
+# Out[22]:
 
 #                                mean  count
 #     short_title                           
@@ -312,23 +314,23 @@ print mean_rating.ix[mask].head()
 #     [5 rows x 2 columns]
 # 
 
-# In[265]:
+# In[23]:
 
 mean_rating.ix[mask]['count'].min()
 
 
-# Out[265]:
+# Out[23]:
 
 #     1001
 
 # ###Highest rated movie with at least 1000 votes?
 
-# In[266]:
+# In[24]:
 
 print mean_rating.ix[mask].sort('mean', ascending=False).head(10)
 
 
-# Out[266]:
+# Out[24]:
 
 #                                                   mean  count
 #     short_title                                              
@@ -348,12 +350,12 @@ print mean_rating.ix[mask].sort('mean', ascending=False).head(10)
 
 # ###What about gender?
 
-# In[267]:
+# In[25]:
 
 data.head(2)
 
 
-# Out[267]:
+# Out[25]:
 
 #        user_id  movie_id  rating  timestamp gender  age  occupation    zip  \
 #     0        1      1193       5  978300760      F    1          10  48067   
@@ -373,14 +375,14 @@ data.head(2)
 # 
 # Like `pivot`, but will summarize and group.
 
-# In[268]:
+# In[26]:
 
 mean_ratings = pd.pivot_table(data, 'rating', rows='short_title', 
                               cols='gender', aggfunc='mean')
 print mean_ratings.head(10)
 
 
-# Out[268]:
+# Out[26]:
 
 #     gender                             F         M
 #     short_title                                   
@@ -400,19 +402,24 @@ print mean_ratings.head(10)
 
 # Only those that have at least 1000 votes.
 
-# In[269]:
+# In[27]:
 
-mean_ratings = mean_ratings[mask]
+get_ipython().magic(u'pinfo pd.pivot_table')
+
+
+# In[29]:
+
+mean_ratings = mean_ratings.ix[mask]
 
 
 # ###Favorites for `M`
 
-# In[270]:
+# In[30]:
 
 print mean_ratings.sort('M', ascending=False).head(10)
 
 
-# Out[270]:
+# Out[30]:
 
 #     gender                                           F         M
 #     short_title                                                 
@@ -432,12 +439,12 @@ print mean_ratings.sort('M', ascending=False).head(10)
 
 # ###Favorites for `F`
 
-# In[271]:
+# In[31]:
 
 print mean_ratings.sort('F', ascending=False).head(10)
 
 
-# Out[271]:
+# Out[31]:
 
 #     gender                                           F         M
 #     short_title                                                 
@@ -457,17 +464,17 @@ print mean_ratings.sort('F', ascending=False).head(10)
 
 # ### Which movies do differ the most in gender ratings?
 
-# In[272]:
+# In[32]:
 
 mean_ratings['diff'] = abs(mean_ratings['M'] - mean_ratings['F'])
 
 
-# In[274]:
+# In[33]:
 
 mean_ratings.sort('diff', ascending=False).head(10)
 
 
-# Out[274]:
+# Out[33]:
 
 #     gender                                       F         M      diff
 #     short_title                                                       
@@ -484,12 +491,12 @@ mean_ratings.sort('diff', ascending=False).head(10)
 #     
 #     [10 rows x 3 columns]
 
-# In[275]:
+# In[34]:
 
 mean_ratings.sort('diff', ascending=True).head(10)
 
 
-# Out[275]:
+# Out[34]:
 
 #     gender                                       F         M      diff
 #     short_title                                                       
@@ -512,52 +519,52 @@ mean_ratings.sort('diff', ascending=True).head(10)
 # 
 # Let's pick out *minimal*.
 
-# In[279]:
+# In[35]:
 
 mean_ratings['diff'].hist(alpha=0.5)
 show()
 
 
-# Out[279]:
+# Out[35]:
 
 # image file:
 
-# In[278]:
+# In[38]:
 
-mean_ratings['F'].hist(alpha=0.5) #blue
-mean_ratings['M'].hist(alpha=0.5)
+mean_ratings.hist(alpha=0.5) #blue
+#mean_ratings['M'].hist(alpha=0.5)
 show()
 
 
-# Out[278]:
+# Out[38]:
 
 # image file:
 
 # How about `diff < 0.05` and `rating > 4.25`?
 
-# In[280]:
+# In[39]:
 
 diff_mask = mean_ratings['diff'] < 0.05 
 m_mask = mean_ratings['M'] > 4.25
 f_mask = mean_ratings['F'] > 4.25
 
 
-# In[282]:
+# In[40]:
 
 mask = diff_mask & m_mask & f_mask
 
 
-# In[283]:
+# In[41]:
 
 tmp = mean_ratings[mask]
 
 
-# In[284]:
+# In[42]:
 
 print tmp
 
 
-# Out[284]:
+# Out[42]:
 
 #     gender                            F         M      diff
 #     short_title                                            
@@ -569,17 +576,17 @@ print tmp
 #     [4 rows x 3 columns]
 # 
 
-# In[285]:
+# In[43]:
 
 tmp['mean'] = tmp['M'] + tmp['F']
 
 
-# In[286]:
+# In[44]:
 
 print tmp.sort('mean', ascending=True)
 
 
-# Out[286]:
+# Out[44]:
 
 #     gender                            F         M      diff      mean
 #     short_title                                                      
