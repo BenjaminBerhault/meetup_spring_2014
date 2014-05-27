@@ -1,7 +1,6 @@
 #PBS -l nodes=1:ppn=1,walltime=00:10:00
 #PBS -N matlab_test_serial
 #PBS -q janus-debug
-#PBS -m be 
 #PBS -j oe
 
 # Written by:	Shelley Knuth
