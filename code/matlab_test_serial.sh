@@ -2,7 +2,6 @@
 #PBS -N matlab_test_serial
 #PBS -q janus-debug
 #PBS -m be 
-#PBS -M shelley.knuth@colorado.edu
 #PBS -j oe
 
 # Written by:	Shelley Knuth
